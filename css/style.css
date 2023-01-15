@@ -744,9 +744,9 @@ h6 {
   height: 100%;
   left: 0;
   top: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.16)), to(rgba(0, 0, 0, 0.8)));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.16)), to(rgba(0, 0, 0, 0.8)));
+  background-color: -o-linear-gradient(top, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .item-categories:hover {
@@ -795,8 +795,8 @@ h6 {
 .brands__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (80px)[2];
-  -ms-grid-columns: (minmax(80px, 140px))[4];
+  -ms-grid-rows: (80px);
+  -ms-grid-columns: (minmax(80px, 140px));
       grid-template: repeat(2, 80px)/repeat(4, minmax(80px, 140px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1788,8 +1788,8 @@ h6 {
   }
 
   .brands__content {
-    -ms-grid-rows: (80px)[3];
-    -ms-grid-columns: (minmax(80px, 140px))[3];
+    -ms-grid-rows: (80px);
+    -ms-grid-columns: (minmax(80px, 140px));
         grid-template: repeat(3, 80px)/repeat(3, minmax(80px, 140px));
     grid-auto-flow: row;
   }
@@ -1892,8 +1892,8 @@ h6 {
 
 @media (max-width: 23.75em) {
   .brands__content {
-    -ms-grid-rows: (80px)[4];
-    -ms-grid-columns: (minmax(80px, 140px))[2];
+    -ms-grid-rows: (80px);
+    -ms-grid-columns: (minmax(80px, 140px));
         grid-template: repeat(4, 80px)/repeat(2, minmax(80px, 140px));
   }
 }
