@@ -448,6 +448,7 @@ h6 {
   -webkit-transition: color 0.4s ease 0s;
   -o-transition: color 0.4s ease 0s;
   transition: color 0.4s ease 0s;
+  color: #121212;
 }
 
 .menu-footer__link:hover {
@@ -744,9 +745,9 @@ h6 {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.16)), to(rgba(0, 0, 0, 0.8)));
-  background-color: -o-linear-gradient(top, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
-  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.16)), to(rgba(0, 0, 0, 0.8)));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .item-categories:hover {
@@ -795,8 +796,8 @@ h6 {
 .brands__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (80px);
-  -ms-grid-columns: (minmax(80px, 140px));
+  -ms-grid-rows: (80px)[2];
+  -ms-grid-columns: (minmax(80px, 140px))[4];
       grid-template: repeat(2, 80px)/repeat(4, minmax(80px, 140px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1128,6 +1129,35 @@ h6 {
   -webkit-transform: translate(0, 5%);
       -ms-transform: translate(0, 5%);
           transform: translate(0, 5%);
+}
+
+._watcher-view .app__images {
+  -webkit-animation: scale 1.5s linear;
+          animation: scale 1.5s linear;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @-webkit-keyframes scale-up-right {
@@ -1788,8 +1818,8 @@ h6 {
   }
 
   .brands__content {
-    -ms-grid-rows: (80px);
-    -ms-grid-columns: (minmax(80px, 140px));
+    -ms-grid-rows: (80px)[3];
+    -ms-grid-columns: (minmax(80px, 140px))[3];
         grid-template: repeat(3, 80px)/repeat(3, minmax(80px, 140px));
     grid-auto-flow: row;
   }
@@ -1892,8 +1922,8 @@ h6 {
 
 @media (max-width: 23.75em) {
   .brands__content {
-    -ms-grid-rows: (80px);
-    -ms-grid-columns: (minmax(80px, 140px));
+    -ms-grid-rows: (80px)[4];
+    -ms-grid-columns: (minmax(80px, 140px))[2];
         grid-template: repeat(4, 80px)/repeat(2, minmax(80px, 140px));
   }
 }
